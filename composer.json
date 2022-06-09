@@ -1,0 +1,22 @@
+{
+    "name": "maxim/game-php",
+    "description": "Simple console RPG",
+    "type": "project",
+    "require": {
+        "psy/psysh": "^0.11.5",
+        "monolog/monolog": "^2.6",
+        "phpunit/phpunit": "^9.5",
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "authors": [
+        {
+            "name": "Maxim Maslov",
+            "email": "maxim.maslov.kd@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    }
+}

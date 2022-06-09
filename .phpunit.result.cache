@@ -1,0 +1,1 @@
+{"version":1,"defects":{"GameTest::testCreateSoldiers":4,"RoundTest::testCreateSoldiers":4},"times":{"GameTest::testCreateSoldiers":0.002,"RoundTest::testCreateSoldiers":0}}
