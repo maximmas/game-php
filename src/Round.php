@@ -39,6 +39,8 @@ class Round
      */
     private array $robotsStock;
 
+    private int $movesCounter;
+
 
     public function __construct(
         private int            $roundNumber,
@@ -49,48 +51,40 @@ class Round
         private KeyboardInput  $input
     )
     {
-        $this->roundNumber = $roundNumber;
         $this->robotsStock = $robotsStock;
-        $this->human = $human;
-        $this->computer = $computer;
-        $this->output = $output;
-        $this->input = $input;
+        $this->movesCounter = 0;
     }
 
-    public function run()
+    public function run(): array
     {
-        echo "Round #" . $this->roundNumber . PHP_EOL;
-        $this->makeMove(Settings::MOVE_FIRST);
-        return true;
+        echo "Round #" . $this->roundNumber . " starts! \n";
+        $roundWinner = $this->makeMove(Settings::MOVE_FIRST);
+
+        return [$roundWinner, $this->roundNumber, $this->movesCounter];
     }
 
-    private function makeMove(string $turn): void
+    private function makeMove(string $turn): string
     {
+
+        $winner = '';
 
         if (!count($this->computer->getArmy())) {
-            system('clear');
-            echo "VICTORY !\n";
-            echo "Computer army is beaten !\n";
-            echo "Player won!\n";
-            $this->endRound();
+            $winner = 'player';
+        } elseif (!count($this->human->getArmy())) {
+            $winner = 'computer';
+        } else {
+            ++$this->movesCounter;
+            ($turn === 'player') ? $this->humanMove() : $this->computerMove();
         }
 
-        if (!count($this->human->getArmy())) {
-            system('clear');
-            echo "DEFEAT !\n";
-            echo "Player army is beaten !\n";
-            echo "Computer won!\n";
-            $this->endRound();
-        }
-
-        $moveResult = ($turn === 'player') ? $this->humanMove() : $this->computerMove();
+        return $winner;
     }
 
     private function humanMove(): void
     {
 
         echo "Press 'a' to make a move \n";
-        $input = $this->input->getInput(['a']);
+        $this->input->getInput(['a']);
 
         system('clear');
         echo "/***** Player turn now *****/ \n";
@@ -116,8 +110,8 @@ class Round
             '3' => $this->human->upgrade()
         };
 
-//        $this->makeMove('computer');
-        $this->makeMove('player');
+        $this->makeMove('computer');
+
     }
 
     private function computerMove(): void
@@ -136,7 +130,8 @@ class Round
         $this->output->displayArmyInfo($this->human->getArmy());
         $this->output->displaySeparator();
 
-        $input = random_int(1, 2);
+//        $input = random_int(1, 2);
+        $input = 1;
 
         match ($input) {
             1 => $this->computer->attack(),
@@ -144,12 +139,6 @@ class Round
         };
 
         $this->makeMove('player');
-    }
-
-    private function endRound()
-    {
-        echo "Round " . $this->roundNumber . " end";
-        exit();
     }
 
 }

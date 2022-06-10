@@ -13,6 +13,7 @@ class HumanPlayer extends Player
         parent::__construct($initRobotsStock, $output, $input);
     }
 
+
     /**
      * Set opponent player instance
      *
@@ -90,6 +91,7 @@ class HumanPlayer extends Player
             $this->computer->reduceRobotHealth($targetRobotIndex, $reducedTargetHealth);
         }
     }
+
 
     /**
      * Changing robot

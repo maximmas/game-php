@@ -15,7 +15,7 @@ system('clear');
 main();
 
 /**
- * Game starter function
+ * Game entry point
  *
  * @return void
  * @throws Exception
@@ -26,7 +26,7 @@ function main()
     $input = new \App\KeyboardInput();
     $output = new \App\Output();
 
-    if ($input->getInput(['s', 'q']) === 's'){
+    if ($input->getInput(['s', 'q']) === 's') {
         echo "Lets start the game, Player !\n";
 
         // run 4 rounds
@@ -47,9 +47,20 @@ function main()
             $human->setOpponent($computer);
 
             $round = new Round($i, $robotsStock, $human, $computer, $output, $input);
-            $roundResult = $round->run();
+            $roundResults = $round->run();
+
+            $output->displaySeparator();
+            $output->displayRoundResult($roundResults);
 
             unset($round, $allRobots, $computer, $human);
+
+            $output->displaySeparator();
+            echo "Press 's' for the next round and 'q' for exit \n";
+
+            if($input->getInput(['s','q']) === 'q') {
+                die('Bye!\n');
+            }
+
         }
 
     }
@@ -99,14 +110,14 @@ function getUniqueName(array $robots): string
 {
 
     $allNames = Settings::NAMES;
-    $usedNames = [];
+
     if (!count($robots)) {
         return $allNames[0];
     }
-    foreach ($robots as $robot) {
-        $usedNames[] = $robot->getName();
-    }
+
+    $usedNames = array_map(fn($robot) => $robot->getName(), $robots);
     $freeNames = array_diff($allNames, $usedNames);
+
     shuffle($freeNames);
     return $freeNames[0];
 }

@@ -14,13 +14,16 @@ abstract class Settings
     public const MAX_HUMAN_ARMY_SIZE = 6;
     public const MAX_COMPUTER_ARMY_SIZE = 4;
 
+//    public const MAX_HUMAN_ARMY_SIZE = 1;
+//    public const MAX_COMPUTER_ARMY_SIZE = 1;
+
     // кто ходит первый
 //    public const MOVE_FIRST = 'computer';
     public const MOVE_FIRST = 'player';
 
     public const MIN_STRENGTH_VALUE = 1;
-//    public const MAX_STRENGTH_VALUE = 5;
-    public const MAX_STRENGTH_VALUE = 10;
+    public const MAX_STRENGTH_VALUE = 5;
+//    public const MAX_STRENGTH_VALUE = 10;
 
     public const MIN_HEALTH_VALUE = 3;
     public const MAX_HEALTH_VALUE = 12;

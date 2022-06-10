@@ -46,14 +46,14 @@ class Output
                 ? $robot->getExperience() . " "
                 : $robot->getExperience();
 
-            $info = "Name: $name | ";
-            $info .= "Type: $type | ";
-            $info .= "Strength: $strength | ";
-            $info .= "Feature: $feature | ";
-            $info .= "Agility: $agility | ";
-            $info .= "Health: $health | ";
-            $info .= "Experience: $exp";
-            echo "ID: " . ++$index . " | " . $info . "\n";
+            $msg = "Name: $name | ";
+            $msg .= "Type: $type | ";
+            $msg .= "Strength: $strength | ";
+            $msg .= "Feature: $feature | ";
+            $msg .= "Agility: $agility | ";
+            $msg .= "Health: $health | ";
+            $msg .= "Experience: $exp";
+            echo "ID: " . ++$index . " | " . $msg . "\n";
         }
     }
 
@@ -67,14 +67,37 @@ class Output
     ): void
     {
 
-        $stats = "Attack statistics:\n";
-        $stats .= "Attacker ID: " . $attackerID . PHP_EOL;
-        $stats .= "Target ID: " . $targetID . PHP_EOL;
-        $stats .= "Attacker strength: $attackDamage ";
-        $stats .= " | Target health: " . $targetHealth;
-        $stats .= " | New target health: " . $newHealth . PHP_EOL;
-        echo $stats;
+        $msg = "Attack statistics:\n";
+        $msg .= "Attacker ID: " . $attackerID . PHP_EOL;
+        $msg .= "Target ID: " . $targetID . PHP_EOL;
+        $msg .= "Attacker strength: $attackDamage ";
+        $msg .= " | Target health: " . $targetHealth;
+        $msg .= " | New target health: " . $newHealth . PHP_EOL;
+        echo $msg;
 
+    }
+
+
+    public function displayRoundResult(array $results): void
+    {
+
+        list($winner, $round, $moves) = $results;
+
+        $msg = "######## Round " . $round . " end ########\n";
+
+        if ($winner === 'player') {
+            $msg .= "VICTORY !\n";
+            $msg .= "Computer army is beaten !\n";
+            $msg .= "Player won!\n";
+        } else {
+            $msg .= "DEFEAT !\n";
+            $msg .= "Player army is beaten !\n";
+            $msg .= "Computer won!\n";
+        }
+
+        $msg .= "Total moves: " . $moves . PHP_EOL;
+
+        echo $msg;
     }
 
 
