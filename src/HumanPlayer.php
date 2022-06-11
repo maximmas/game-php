@@ -31,9 +31,7 @@ class HumanPlayer extends Player
         echo "----------------------------------\n";
         echo "Go fighting!\n";
 
-        // получаем актуальные ключи массива армии игрока
         $playerArmyKeys = array_keys($this->army);
-        // делаем этот массив со строковыми значениями на 1 больше (ID роботов начинаются с 1, а не 0)
         $allowedKeys = array_map(fn($value): string => (string)++$value, $playerArmyKeys);
 
         echo "Choose player robot ID to attack: ";
@@ -93,14 +91,7 @@ class HumanPlayer extends Player
     }
 
 
-    /**
-     * Changing robot
-     *
-     * @param $robotsStock
-     * @return void
-     *
-     */
-    public function changeRobot(&$robotsStock): void
+    public function changeRobot(array &$robotsStock): void
     {
         echo "Free robots to exchange:\n";
 

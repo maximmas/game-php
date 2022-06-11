@@ -68,17 +68,289 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classApp_1_1Player-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">App\Player Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for App\Player:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classApp_1_1Player.png" usemap="#App_5CPlayer_map" alt=""/>
+  <map id="App_5CPlayer_map" name="App_5CPlayer_map">
+<area href="classApp_1_1ComputerPlayer.html" alt="App\ComputerPlayer" shape="rect" coords="0,56,130,80"/>
+<area href="classApp_1_1HumanPlayer.html" alt="App\HumanPlayer" shape="rect" coords="140,56,270,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a62315f3d4184e1c7268bb183602fcb51"><td class="memItemLeft" align="right" valign="top"><a id="a62315f3d4184e1c7268bb183602fcb51" name="a62315f3d4184e1c7268bb183602fcb51"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>attack</b> ()</td></tr>
+<tr class="memitem:a90674ee2450847267e1ece498019bbe7"><td class="memItemLeft" align="right" valign="top"><a id="a90674ee2450847267e1ece498019bbe7" name="a90674ee2450847267e1ece498019bbe7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>__construct</b> (array $initRobotsStock, <a class="el" href="classApp_1_1Output.html">Output</a> $output, <a class="el" href="classApp_1_1KeyboardInput.html">KeyboardInput</a> $input)</td></tr>
+<tr class="separator:a90674ee2450847267e1ece498019bbe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62315f3d4184e1c7268bb183602fcb51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApp_1_1Player.html#a62315f3d4184e1c7268bb183602fcb51">attack</a> ()</td></tr>
 <tr class="separator:a62315f3d4184e1c7268bb183602fcb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d117bbb84c25c2e7837d1b618f6f4ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApp_1_1Player.html#a0d117bbb84c25c2e7837d1b618f6f4ac">changeRobot</a> (array &amp;$robotsStock)</td></tr>
+<tr class="separator:a0d117bbb84c25c2e7837d1b618f6f4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e94dec69743e6eca85790b06de0d61c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApp_1_1Player.html#a4e94dec69743e6eca85790b06de0d61c">getArmy</a> ()</td></tr>
+<tr class="separator:a4e94dec69743e6eca85790b06de0d61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae42e44c03f52056de6f52d7ee43ed0df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApp_1_1Player.html#ae42e44c03f52056de6f52d7ee43ed0df">createArmy</a> (array $initRobotsStock)</td></tr>
+<tr class="separator:ae42e44c03f52056de6f52d7ee43ed0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74c8881fd2c2022fc20eb7c14cb3c73e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApp_1_1Player.html#a74c8881fd2c2022fc20eb7c14cb3c73e">reduceRobotHealth</a> (int $robotIndex, int $healthValue)</td></tr>
+<tr class="separator:a74c8881fd2c2022fc20eb7c14cb3c73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:adf39de329d1d4eb252b4cdb79df102e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApp_1_1Player.html#adf39de329d1d4eb252b4cdb79df102e0">removeRobot</a> (int $robotIndex)</td></tr>
+<tr class="separator:adf39de329d1d4eb252b4cdb79df102e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a180a1d5bdb986acafcd46bf96f6d178d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApp_1_1Player.html#a180a1d5bdb986acafcd46bf96f6d178d">calculateAttackStrength</a> (<a class="el" href="classApp_1_1Robot.html">Robot</a> $attackRobot, <a class="el" href="classApp_1_1Robot.html">Robot</a> $targetRobot)</td></tr>
+<tr class="separator:a180a1d5bdb986acafcd46bf96f6d178d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a7b976c8b18da548bce0bd115b20f7a08"><td class="memItemLeft" align="right" valign="top"><a id="a7b976c8b18da548bce0bd115b20f7a08" name="a7b976c8b18da548bce0bd115b20f7a08"></a>
+array&#160;</td><td class="memItemRight" valign="bottom"><b>$army</b></td></tr>
+<tr class="separator:a7b976c8b18da548bce0bd115b20f7a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af312812339944afdbd1cb7cc637a9a33"><td class="memItemLeft" align="right" valign="top"><a id="af312812339944afdbd1cb7cc637a9a33" name="af312812339944afdbd1cb7cc637a9a33"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>$armySize</b></td></tr>
+<tr class="separator:af312812339944afdbd1cb7cc637a9a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60133163c2f49dc9655dd792d0d6e27e"><td class="memItemLeft" align="right" valign="top"><a id="a60133163c2f49dc9655dd792d0d6e27e" name="a60133163c2f49dc9655dd792d0d6e27e"></a>
+<a class="el" href="classApp_1_1Output.html">Output</a>&#160;</td><td class="memItemRight" valign="bottom"><b>$output</b></td></tr>
+<tr class="separator:a60133163c2f49dc9655dd792d0d6e27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d2ba53344d37e7273b75fd44a145d5"><td class="memItemLeft" align="right" valign="top"><a id="ae6d2ba53344d37e7273b75fd44a145d5" name="ae6d2ba53344d37e7273b75fd44a145d5"></a>
+<a class="el" href="classApp_1_1KeyboardInput.html">KeyboardInput</a>&#160;</td><td class="memItemRight" valign="bottom"><b>$input</b></td></tr>
+<tr class="separator:ae6d2ba53344d37e7273b75fd44a145d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Basic class for game player </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a62315f3d4184e1c7268bb183602fcb51" name="a62315f3d4184e1c7268bb183602fcb51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62315f3d4184e1c7268bb183602fcb51">&#9670;&nbsp;</a></span>attack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">App\Player::attack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Method for doing attack </p>
+
+<p>Reimplemented in <a class="el" href="classApp_1_1ComputerPlayer.html#a8b972be9aa3e64f9132f72c61a09a4ac">App\ComputerPlayer</a>, and <a class="el" href="classApp_1_1HumanPlayer.html#a0756abf365e71b20eb2f5998af0c608a">App\HumanPlayer</a>.</p>
+
+</div>
+</div>
+<a id="a180a1d5bdb986acafcd46bf96f6d178d" name="a180a1d5bdb986acafcd46bf96f6d178d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a180a1d5bdb986acafcd46bf96f6d178d">&#9670;&nbsp;</a></span>calculateAttackStrength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">App\Player::calculateAttackStrength </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classApp_1_1Robot.html">Robot</a>&#160;</td>
+          <td class="paramname"><em>$attackRobot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classApp_1_1Robot.html">Robot</a>&#160;</td>
+          <td class="paramname"><em>$targetRobot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Calculate attack strength</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype"><a class="el" href="classApp_1_1Robot.html">Robot</a></td><td class="paramname">$attackRobot</td><td>Attacker </td></tr>
+    <tr><td class="paramtype"><a class="el" href="classApp_1_1Robot.html">Robot</a></td><td class="paramname">$targetRobot</td><td>Target </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="a0d117bbb84c25c2e7837d1b618f6f4ac" name="a0d117bbb84c25c2e7837d1b618f6f4ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d117bbb84c25c2e7837d1b618f6f4ac">&#9670;&nbsp;</a></span>changeRobot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">App\Player::changeRobot </td>
+          <td>(</td>
+          <td class="paramtype">array &amp;&#160;</td>
+          <td class="paramname"><em>$robotsStock</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Change robot action handler</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">array</td><td class="paramname">$robotsStock</td><td>All free robots available for changing </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classApp_1_1ComputerPlayer.html#a858eccd669ae5491d183abb42195e3c9">App\ComputerPlayer</a>, and <a class="el" href="classApp_1_1HumanPlayer.html#a5adb672ce7bd5b08bdf11d3e60a22818">App\HumanPlayer</a>.</p>
+
+</div>
+</div>
+<a id="ae42e44c03f52056de6f52d7ee43ed0df" name="ae42e44c03f52056de6f52d7ee43ed0df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae42e44c03f52056de6f52d7ee43ed0df">&#9670;&nbsp;</a></span>createArmy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">App\Player::createArmy </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$initRobotsStock</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Create player's army</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">array</td><td class="paramname">$initRobotsStock</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
+
+</div>
+</div>
+<a id="a4e94dec69743e6eca85790b06de0d61c" name="a4e94dec69743e6eca85790b06de0d61c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e94dec69743e6eca85790b06de0d61c">&#9670;&nbsp;</a></span>getArmy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">App\Player::getArmy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Army getter</p>
+<dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
+
+</div>
+</div>
+<a id="a74c8881fd2c2022fc20eb7c14cb3c73e" name="a74c8881fd2c2022fc20eb7c14cb3c73e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74c8881fd2c2022fc20eb7c14cb3c73e">&#9670;&nbsp;</a></span>reduceRobotHealth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">App\Player::reduceRobotHealth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>$robotIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>$healthValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Set new health value of robot by it's index</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">int</td><td class="paramname">$robotIndex</td><td><a class="el" href="classApp_1_1Robot.html">Robot</a> index </td></tr>
+    <tr><td class="paramtype">int</td><td class="paramname">$healthValue</td><td>New health value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="adf39de329d1d4eb252b4cdb79df102e0" name="adf39de329d1d4eb252b4cdb79df102e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf39de329d1d4eb252b4cdb79df102e0">&#9670;&nbsp;</a></span>removeRobot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">App\Player::removeRobot </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>$robotIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Remove robot from player's army</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">int</td><td class="paramname">$robotIndex</td><td>index of robot to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/Player.php</li>
 </ul>

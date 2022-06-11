@@ -29,10 +29,8 @@ function main()
     if ($input->getInput(['s', 'q']) === 's') {
         echo "Lets start the game, Player !\n";
 
-        // run 4 rounds
         for ($i = 1; $i < Settings::TOTAL_ROUNDS + 1; $i++) {
 
-            // all robots available for the game
             $robotsStock = createRobots();
 
             $human = new \App\HumanPlayer($robotsStock, $output, $input);
@@ -52,7 +50,7 @@ function main()
             $output->displaySeparator();
             $output->displayRoundResult($roundResults);
 
-            unset($round, $allRobots, $computer, $human);
+            unset($round, $robotsStock, $computer, $human);
 
             $output->displaySeparator();
             echo "Press 's' for the next round and 'q' for exit \n";

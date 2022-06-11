@@ -56,6 +56,14 @@ abstract class Player
      */
     abstract public function attack(): void;
 
+
+    /**
+     * Change robot action handler
+     *
+     * @param array $robotsStock All free robots available for changing
+     * @return void
+     *
+     */
     abstract public function changeRobot(array &$robotsStock): void;
 
 
@@ -82,17 +90,31 @@ abstract class Player
     {
         shuffle($initRobotsStock);
         return array_slice($initRobotsStock, 0, $this->armySize);
-
     }
 
+    /**
+     * Remove robot from player's army
+     *
+     * @param int $robotIndex index of robot to remove
+     * @return void
+     *
+     */
     protected function removeRobot(int $robotIndex): void
     {
         if (isset($this->army[$robotIndex])) {
             unset($this->army[$robotIndex]);
         }
-
     }
 
+
+    /**
+     * Set new health value of robot by it's index
+     *
+     * @param int $robotIndex Robot index
+     * @param int $healthValue New health value
+     * @return void
+     *
+     */
     public function reduceRobotHealth(int $robotIndex, int $healthValue): void
     {
         if (isset($this->army[$robotIndex])) {
@@ -100,6 +122,7 @@ abstract class Player
             $robot->setHealth($healthValue);
         }
     }
+
 
     /**
      * Calculate attack strength
@@ -111,8 +134,6 @@ abstract class Player
     protected function calculateAttackStrength(Robot $attackRobot, Robot $targetRobot): int
     {
 
-        // Feature увеличивает силу атаки
-        // ловкость уменьшает силу атаки
         $strength = ($attackRobot->getStrength() + $attackRobot->getFeatureStrength()) - $targetRobot->getAgility();
         $attackType = $attackRobot->getType();
         $targetType = $targetRobot->getType();

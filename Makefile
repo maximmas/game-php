@@ -2,7 +2,7 @@ install:
 	composer install
 
 lint:
-	composer exec --verbose phpstan -- --level=6 analyse src tests
+	composer exec --verbose phpstan -- --level=6 analyse src
 
 run:
 	php src/main.php

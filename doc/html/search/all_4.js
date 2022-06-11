@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['player_0',['Player',['../classApp_1_1Player.html',1,'App']]]
+  ['humanplayer_0',['HumanPlayer',['../classApp_1_1HumanPlayer.html',1,'App']]]
 ];

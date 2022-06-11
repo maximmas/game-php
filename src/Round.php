@@ -12,33 +12,22 @@ use App\HumanPlayer;
 class Round
 {
 
-
-    /**
-     * Array of player robots
-     *
-     * @var array
-     */
-    private array $playerArmy;
-
-    /**
-     * Array of computer robots
-     *
-     * @var array
-     *
-     */
-    private array $computerArmy;
-
-
     /**
      *  Unused robots left on stock after armies creation
      *
-     * Free robots can be used with exchange action
+     *  Free robots can be used with exchange action
      *
      * @var array
      *
      */
     private array $robotsStock;
 
+
+    /**
+     * Counter of moves in the round
+     *
+     * @var int
+     */
     private int $movesCounter;
 
 
@@ -55,6 +44,12 @@ class Round
         $this->movesCounter = 0;
     }
 
+
+    /**
+     * Start game round
+     *
+     * @return array round results
+     */
     public function run(): array
     {
         echo "Round #" . $this->roundNumber . " starts! \n";
@@ -63,6 +58,14 @@ class Round
         return [$roundWinner, $this->roundNumber, $this->movesCounter];
     }
 
+
+    /**
+     * Switch move between human and computer
+     *
+     * @param string $turn whose move 'human'|'computer'
+     * @return string round winner 'human'|'computer'
+     *
+     */
     private function makeMove(string $turn): string
     {
 
@@ -80,6 +83,13 @@ class Round
         return $winner;
     }
 
+
+    /**
+     * Human player move handler
+     *
+     * @return void
+     *
+     */
     private function humanMove(): void
     {
 
@@ -107,13 +117,23 @@ class Round
         match ($input) {
             '1' => $this->human->attack(),
             '2' => $this->human->changeRobot($this->robotsStock),
-            '3' => $this->human->upgrade()
+            '3' => $this->human->upgrade(),
+            default => '',
         };
 
         $this->makeMove('computer');
 
     }
 
+
+    /**
+     *  Computer player move handler
+     *
+     * @return void
+     * @throws \Exception
+     *
+     *
+     */
     private function computerMove(): void
     {
         echo "Press 'a' to make a move \n";
@@ -130,12 +150,11 @@ class Round
         $this->output->displayArmyInfo($this->human->getArmy());
         $this->output->displaySeparator();
 
-//        $input = random_int(1, 2);
-        $input = 1;
+        $input = random_int(1, 2);
 
         match ($input) {
             1 => $this->computer->attack(),
-            2 => $this->computer->changeRobot($this->robotsStock)
+            2 => $this->computer->changeRobot($this->robotsStock),
         };
 
         $this->makeMove('player');

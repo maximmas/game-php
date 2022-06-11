@@ -75,13 +75,146 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a18ec679d3cfc532ff557f5c320348865"><td class="memItemLeft" align="right" valign="top"><a id="a18ec679d3cfc532ff557f5c320348865" name="a18ec679d3cfc532ff557f5c320348865"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>displayArmyInfo</b> (array $army)</td></tr>
+<tr class="memitem:a18ec679d3cfc532ff557f5c320348865"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApp_1_1Output.html#a18ec679d3cfc532ff557f5c320348865">displayArmyInfo</a> (array $army)</td></tr>
 <tr class="separator:a18ec679d3cfc532ff557f5c320348865"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa933a28c5db7f4549b79d5be2a5b72be"><td class="memItemLeft" align="right" valign="top"><a id="aa933a28c5db7f4549b79d5be2a5b72be" name="aa933a28c5db7f4549b79d5be2a5b72be"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>displaySeparator</b> ()</td></tr>
+<tr class="memitem:a669533cf3cc8b0823f679310a1e220a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApp_1_1Output.html#a669533cf3cc8b0823f679310a1e220a2">displayAttackStats</a> (int $attackerID, int $targetID, int $attackDamage, int $targetHealth, int $newHealth)</td></tr>
+<tr class="separator:a669533cf3cc8b0823f679310a1e220a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd57a199286260d9cb16cf170180a18"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApp_1_1Output.html#a5bd57a199286260d9cb16cf170180a18">displayRoundResult</a> (array $results)</td></tr>
+<tr class="separator:a5bd57a199286260d9cb16cf170180a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa933a28c5db7f4549b79d5be2a5b72be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApp_1_1Output.html#aa933a28c5db7f4549b79d5be2a5b72be">displaySeparator</a> ()</td></tr>
 <tr class="separator:aa933a28c5db7f4549b79d5be2a5b72be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a18ec679d3cfc532ff557f5c320348865" name="a18ec679d3cfc532ff557f5c320348865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18ec679d3cfc532ff557f5c320348865">&#9670;&nbsp;</a></span>displayArmyInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">App\Output::displayArmyInfo </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$army</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p ><a class="el" href="classApp_1_1Output.html">Output</a> string with current player or computer army state</p>
+<p >Army state is a list of active robots with their parameters</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">array</td><td class="paramname">$army</td><td>array of robots </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a669533cf3cc8b0823f679310a1e220a2" name="a669533cf3cc8b0823f679310a1e220a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a669533cf3cc8b0823f679310a1e220a2">&#9670;&nbsp;</a></span>displayAttackStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">App\Output::displayAttackStats </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>$attackerID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>$targetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>$attackDamage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>$targetHealth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>$newHealth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Display result of attack</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">int</td><td class="paramname">$attackerID</td><td></td></tr>
+    <tr><td class="paramtype">int</td><td class="paramname">$targetID</td><td></td></tr>
+    <tr><td class="paramtype">int</td><td class="paramname">$attackDamage</td><td></td></tr>
+    <tr><td class="paramtype">int</td><td class="paramname">$targetHealth</td><td></td></tr>
+    <tr><td class="paramtype">int</td><td class="paramname">$newHealth</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a5bd57a199286260d9cb16cf170180a18" name="a5bd57a199286260d9cb16cf170180a18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bd57a199286260d9cb16cf170180a18">&#9670;&nbsp;</a></span>displayRoundResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">App\Output::displayRoundResult </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$results</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Display result of round</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">array</td><td class="paramname">$results</td><td><a class="el" href="classApp_1_1Round.html">Round</a> results: round number, winner, moves number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="aa933a28c5db7f4549b79d5be2a5b72be" name="aa933a28c5db7f4549b79d5be2a5b72be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa933a28c5db7f4549b79d5be2a5b72be">&#9670;&nbsp;</a></span>displaySeparator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">App\Output::displaySeparator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p ><a class="el" href="classApp_1_1Output.html">Output</a> separator line</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/Output.php</li>
 </ul>

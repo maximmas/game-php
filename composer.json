@@ -6,7 +6,8 @@
         "psy/psysh": "^0.11.5",
         "monolog/monolog": "^2.6",
         "phpunit/phpunit": "^9.5",
-        "vlucas/phpdotenv": "^5.4"
+        "vlucas/phpdotenv": "^5.4",
+        "phpstan/phpstan": "^1.7"
     },
     "authors": [
         {

@@ -3,12 +3,86 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classApp_1_1Output_a18ec679d3cfc532ff557f5c320348865}\label{classApp_1_1Output_a18ec679d3cfc532ff557f5c320348865}} 
-{\bfseries display\+Army\+Info} (array \$army)
+\mbox{\hyperlink{classApp_1_1Output_a18ec679d3cfc532ff557f5c320348865}{display\+Army\+Info}} (array \$army)
 \item 
-\mbox{\Hypertarget{classApp_1_1Output_aa933a28c5db7f4549b79d5be2a5b72be}\label{classApp_1_1Output_aa933a28c5db7f4549b79d5be2a5b72be}} 
-{\bfseries display\+Separator} ()
+\mbox{\hyperlink{classApp_1_1Output_a669533cf3cc8b0823f679310a1e220a2}{display\+Attack\+Stats}} (int \$attacker\+ID, int \$target\+ID, int \$attack\+Damage, int \$target\+Health, int \$new\+Health)
+\item 
+\mbox{\hyperlink{classApp_1_1Output_a5bd57a199286260d9cb16cf170180a18}{display\+Round\+Result}} (array \$results)
+\item 
+\mbox{\hyperlink{classApp_1_1Output_aa933a28c5db7f4549b79d5be2a5b72be}{display\+Separator}} ()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classApp_1_1Output_a18ec679d3cfc532ff557f5c320348865}\label{classApp_1_1Output_a18ec679d3cfc532ff557f5c320348865}} 
+\index{App\textbackslash{}Output@{App\textbackslash{}Output}!displayArmyInfo@{displayArmyInfo}}
+\index{displayArmyInfo@{displayArmyInfo}!App\textbackslash{}Output@{App\textbackslash{}Output}}
+\doxysubsubsection{\texorpdfstring{displayArmyInfo()}{displayArmyInfo()}}
+{\footnotesize\ttfamily App\textbackslash{}\+Output\+::display\+Army\+Info (\begin{DoxyParamCaption}\item[{array}]{\$army }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classApp_1_1Output}{Output}} string with current player or computer army state
+
+Army state is a list of active robots with their parameters
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$army} & array of robots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classApp_1_1Output_a669533cf3cc8b0823f679310a1e220a2}\label{classApp_1_1Output_a669533cf3cc8b0823f679310a1e220a2}} 
+\index{App\textbackslash{}Output@{App\textbackslash{}Output}!displayAttackStats@{displayAttackStats}}
+\index{displayAttackStats@{displayAttackStats}!App\textbackslash{}Output@{App\textbackslash{}Output}}
+\doxysubsubsection{\texorpdfstring{displayAttackStats()}{displayAttackStats()}}
+{\footnotesize\ttfamily App\textbackslash{}\+Output\+::display\+Attack\+Stats (\begin{DoxyParamCaption}\item[{int}]{\$attacker\+ID,  }\item[{int}]{\$target\+ID,  }\item[{int}]{\$attack\+Damage,  }\item[{int}]{\$target\+Health,  }\item[{int}]{\$new\+Health }\end{DoxyParamCaption})}
+
+Display result of attack
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$attacker\+ID} & \\
+\hline
+int & {\em \$target\+ID} & \\
+\hline
+int & {\em \$attack\+Damage} & \\
+\hline
+int & {\em \$target\+Health} & \\
+\hline
+int & {\em \$new\+Health} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classApp_1_1Output_a5bd57a199286260d9cb16cf170180a18}\label{classApp_1_1Output_a5bd57a199286260d9cb16cf170180a18}} 
+\index{App\textbackslash{}Output@{App\textbackslash{}Output}!displayRoundResult@{displayRoundResult}}
+\index{displayRoundResult@{displayRoundResult}!App\textbackslash{}Output@{App\textbackslash{}Output}}
+\doxysubsubsection{\texorpdfstring{displayRoundResult()}{displayRoundResult()}}
+{\footnotesize\ttfamily App\textbackslash{}\+Output\+::display\+Round\+Result (\begin{DoxyParamCaption}\item[{array}]{\$results }\end{DoxyParamCaption})}
+
+Display result of round
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$results} & \mbox{\hyperlink{classApp_1_1Round}{Round}} results\+: round number, winner, moves number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classApp_1_1Output_aa933a28c5db7f4549b79d5be2a5b72be}\label{classApp_1_1Output_aa933a28c5db7f4549b79d5be2a5b72be}} 
+\index{App\textbackslash{}Output@{App\textbackslash{}Output}!displaySeparator@{displaySeparator}}
+\index{displaySeparator@{displaySeparator}!App\textbackslash{}Output@{App\textbackslash{}Output}}
+\doxysubsubsection{\texorpdfstring{displaySeparator()}{displaySeparator()}}
+{\footnotesize\ttfamily App\textbackslash{}\+Output\+::display\+Separator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classApp_1_1Output}{Output}} separator line
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

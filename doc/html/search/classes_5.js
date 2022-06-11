@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['settings_0',['Settings',['../classApp_1_1Settings.html',1,'App']]]
+  ['robot_0',['Robot',['../classApp_1_1Robot.html',1,'App']]],
+  ['round_1',['Round',['../classApp_1_1Round.html',1,'App']]]
 ];

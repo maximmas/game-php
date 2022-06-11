@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\HumanPlayer;
+
 class ComputerPlayer extends Player
 {
 
@@ -17,7 +19,7 @@ class ComputerPlayer extends Player
     /**
      * Set opponent player instance
      *
-     * @param ComputerPlayer $computer
+     * @param HumanPlayer $human
      * @return void
      *
      */

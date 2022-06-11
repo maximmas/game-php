@@ -58,6 +58,18 @@ class Output
     }
 
 
+    /**
+     * Display result of attack
+     *
+     *
+     * @param int $attackerID
+     * @param int $targetID
+     * @param int $attackDamage
+     * @param int $targetHealth
+     * @param int $newHealth
+     * @return void
+     *
+     */
     public function displayAttackStats(
         int $attackerID,
         int $targetID,
@@ -78,6 +90,13 @@ class Output
     }
 
 
+    /**
+     * Display result of round
+     *
+     * @param array $results Round results: round number, winner, moves number
+     * @return void
+     *
+     */
     public function displayRoundResult(array $results): void
     {
 
